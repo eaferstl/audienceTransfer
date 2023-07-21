@@ -43,13 +43,11 @@ wk2.clear()
 wk2.update('A1:C1', [['SHA256_Email', 'City', 'State']])
 wk2.format('A1:C1', {'textFormat': {'bold': True}})
 
-print('Flag 1')
 
 #Premade Seller
 ps = read_audience('Audiencelab Export - Premade Search Seller')
 row = write_audience(ps, 2)
 
-print('Flag 2')
 
 #Premade Buyer
 pb = read_audience('Audiencelab Export - Premade Search Buyer')

@@ -15,7 +15,7 @@ def transfer():
 
 
 print('Flag0')
-schedule.every().day.at("13:25", timezone("America/New_York")).do(transfer)
+schedule.every().day.at("09:30", timezone("America/New_York")).do(transfer)
 print('Flag3')
 
 while True:
