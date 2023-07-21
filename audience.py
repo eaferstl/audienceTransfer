@@ -7,8 +7,14 @@ import math
 
 
 
+#authenticate and connect to gspread
+gp = gs.oauth()
+
+
+
 def read_audience(name):
-	sh1 = gc.open(name)
+	global gp
+	sh1 = gp.open(name)
 	wk1 = sh1.worksheet('export')
 	arr = np.array(wk1.get_all_values())
 	for i in range(3):
@@ -30,11 +36,8 @@ def write_audience(audience, tot):
 
 
 
-#authenticate and connect to gspread
-gc = gs.oauth()
-
 #clear fluency spreadsheet to prepare for new data
-sh2 = gc.open('New spreadsheet')
+sh2 = gp.open('New spreadsheet')
 wk2 = sh2.worksheet('Sheet1')
 wk2.clear()
 wk2.update('A1:C1', [['SHA256_Email', 'City', 'State']])
