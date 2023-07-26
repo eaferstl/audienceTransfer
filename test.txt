@@ -1,0 +1,5 @@
+Flag0
+Flag1
+Flag2
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gspread/worksheet.py:1046: UserWarning: [Deprecated][in version 6.0.0]: method signature will change to: 'Worksheet.update(value = [[]], range_name=)' arguments 'range_name' and 'values' will swap, values will be mandatory of type: 'list(list(...))'
+  warnings.warn(

@@ -26,7 +26,7 @@ def read_audience(name):
 	
 
 def write_audience(audience, tot):
-	spread = Spread('New spreadsheet')
+	spread = Spread('Fluency List')
 	for i in range(18):
 		time.sleep(4)
 		data = pd.DataFrame(audience[i])
@@ -37,10 +37,10 @@ def write_audience(audience, tot):
 
 
 #clear fluency spreadsheet to prepare for new data
-sh2 = gp.open('New spreadsheet')
+sh2 = gp.open('Fluency List')
 wk2 = sh2.worksheet('Sheet1')
 wk2.clear()
-wk2.update('A1:C1', [['SHA256_Email', 'City', 'State']])
+wk2.update('A1:C1', [['SHA256EMAIL', 'City', 'State']])
 wk2.format('A1:C1', {'textFormat': {'bold': True}})
 
 
