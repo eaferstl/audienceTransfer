@@ -9,15 +9,15 @@ from pytz import timezone
 
 
 def transfer():
-	print('In Function')
+	print('Flag2')
 	with open("audience.py") as f:
     		exec(f.read())
 
 
 print('Flag0')
-schedule.every().day.at("09:30", timezone("America/New_York")).do(transfer)
-print('Flag3')
+schedule.every().monday.at("09:30", timezone("America/New_York")).do(transfer)
+print('Flag1')
 
 while True:
 	schedule.run_pending()
-	time.sleep(60)
+	time.sleep(900)
