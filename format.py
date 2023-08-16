@@ -64,19 +64,22 @@ wk2.format('A1:F1', {'textFormat': {'bold': True}})
 
 
 #Premade Seller
-ps = read_audience('NewFormat')
+ps = read_audience('Audiencelab Export - Premade Search Seller')
 f1 = format_audience(ps)
 row = write_audience(f1, 2)
 
 
 #Premade Buyer
-#pb = read_audience('Audiencelab Export - Premade Search Buyer')
-#row = write_audience(pb, row)
+pb = read_audience('Audiencelab Export - Premade Search Buyer')
+f2 = format_audience(pb)
+row = write_audience(f2, row)
 
 #Keyword Seller
-#ks = read_audience('Audiencelab Export - Keyword Search Seller')
-#row = write_audience(ks, row)
+ks = read_audience('Audiencelab Export - Keyword Search Seller')
+f3 = format_audience(ks)
+row = write_audience(f3, row)
 
 #Keyword Buyer
-#kb = read_audience('Audiencelab Export - Keyword Search Buyer')
-#row = write_audience(kb, row)
+kb = read_audience('Audiencelab Export - Keyword Search Buyer')
+f4 = format_audience(kb)
+row = write_audience(f4, row)
